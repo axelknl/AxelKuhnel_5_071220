@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Orinoco</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/835da4a40a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/sliderMenu.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="home">
+            <video autoplay muted loop id="myVideo">
+                <source src="assets/duracell-teddy-bear-commercial-commercial-planet.mp4" type="video/mp4">
+              </video>
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html">ORINOCO</a>
+                </div>
+                <nav class="menu">
+                    <a href="#product">Produits</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </nav>
+            </header>
+            <div class="baseline">
+                <h1 class="title">ORINOCO</h1>
+                <p class="subtitle">Des ours en peluche Made in France ? Oui ça éxiste et vous êtes au bon endroit.</p>
+                <a href="#product" class="discover">Découvrir <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="container container__product">
+                <h2 class="list__title">NOS PRODUITS</h2>
+                <div id="product" class="product__list">
+                </div>
+            </div>
+        </section>
+
+        <template id="productTemp">
+            <a class="product__item">
+                <div class="product__pic">
+                    <img src="" alt="">
+                </div>
+                <h3 class="product__name"></h3>
+                <p class="product__price"></p>
+            </a>
+        </template>
+
+        <footer>
+            <div class="link__list">
+                <a href="">Mentions légales</a>
+                <a href="">Service clients : 06 21 56 68 78</a>
+                <a href="" class="contact">Contact : Mail</a>
+            </div>
+            <p class="author">Copyright Orinoco . Design by <a href="http://axelkuhnel.com/">Axel KUHNEL</a></p>
+        </footer>
+        <script src="js/allProductCopy.js"></script>
+    </body>
+</html>

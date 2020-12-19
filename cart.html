@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Orinoco</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/835da4a40a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/sliderMenu.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header__product">
+            <div class="logo">
+                <a href="index.html">ORINOCO</a>
+            </div>
+            <nav class="menu">
+                <a href="index.html#product">Produits</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </nav>
+        </header>
+
+        <div class="space"></div>
+
+        <div class="container__cart__page">
+            <div class="cart__page">
+                <div class="container container__cart">
+                    <span class="clearCart" id="clearCart" onclick="clearCart()" >Vider le Panier<i class="fas fa-trash-alt fa-lg"></i></span>
+                    <div class="cart" id="cart__list">
+                    </div>
+                    <p class="total__price">PRIX TOTAL : <span id="totalPrice" ></span> €</p>
+                </div>
+            </div>
+
+            <template id="cartTemp">
+                <div class="cart__item">
+                    <div class="item__pic">
+                        <img src="assets/teddy_4.jpg" alt="">
+                    </div>
+                    <div class="item__list">
+                        <p class="item__name"></p>
+                        <p class="item__option"></p>
+                        <p class="item__price"></p>
+                        </div>
+                    <i class="fas fa-times fa-lg"></i>
+                </div>
+                <hr>
+            </template>
+
+            <div class="pay">
+                <div class="container container__info">
+                    <div class="container container__pay">
+                            <div class="delivery">
+                                <h2>Informations de livraison</h2>
+                                <div class="form__row">
+                                    <div class="form__col">
+                                        <label for="firstname">Prénom :</label>
+                                        <input type="text" id="firstname" name="user_firstname">
+                                    </div>
+                                    <div class="form__col">
+                                        <label for="name">Nom :</label>
+                                        <input type="text" id="name" name="user_name">
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__col">
+                                        <label for="adress">Adresse :</label>
+                                        <input type="text" id="adress" name="user_adress">
+                                    </div>
+                                    <div class="form__col">
+                                        <label for="city">Ville :</label>
+                                        <input type="text" id="city" name="user_city">
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__col">
+                                        <label for="zipcode">Code Postal :</label>
+                                        <input type="number" id="zipcode" name="user_zipcode">
+                                    </div>
+                                    <div class="form__col">
+                                        <label for="mail">e-mail :</label>
+                                        <input type="email" id="mail" name="user_mail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment">
+                                <h2>Informations de paiement</h2>
+                                <div class="form__row">
+                                    <div class="form__col">
+                                        <label for="card_cvv">Méthode de Paiement :</label>
+                                        <div class="card__type__container">
+                                            <div>
+                                                <img id="cardType" class="card__type" src="assets/visa_card.jpg" alt="">
+                                            </div>
+                                            <select name="select__card" id="card__option" class="card__select">
+                                                <option value="0">VISA</option>
+                                                <option value="1">CARTE BLEUE</option>
+                                                <option value="2">MASTERCARD</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__col">
+                                        <label for="card_number">N° de carte :</label>
+                                        <input type="number" id="card_number" name="card_number">
+                                    </div>
+                                    <div class="form__col">
+                                        <label for="card_cvv">CVV :</label>
+                                        <input type="number" id="card_cvv" name="card_cvv">
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__col">
+                                        <label for="card_month">Date d'expiration :</label>
+                                        <div class="exp__container">
+                                            <input type="number" id="card_month" name="card_month">
+                                            <input type="number" id="card_year" name="card_year">
+                                        </div>
+                                    </div>
+                                    <div class="form__col">
+                                        <label for="card_name">Nom :</label>
+                                        <input type="text" id="card_name" name="card_name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="button" onclick="payment()">Confirmer le paiement</a>
+                        <p class="error__message" id="errorMessage"></p>
+                    </div>
+                </div>
+        </div>
+
+        <footer>
+            <div class="link__list">
+                <a href="">Mentions légales</a>
+                <a href="">Service clients : 06 21 56 68 78</a>
+                <a href="" class="contact">Contact : Mail</a>
+            </div>
+            <p class="author">Copyright Orinoco . Design by <a href="http://axelkuhnel.com/">Axel KUHNEL</a></p>
+        </footer>
+        <script src="js/paymentCopy.js"></script>
+        <script src="js/cartCopy.js"></script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Orinoco</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/835da4a40a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/sliderMenu.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="confirm">
+            <div class="container container__confirm">
+                <div class="order">
+                    <div class="validate">
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="order__number">Merci pour votre commande, voici votre numéro de suivi : <span class="order__id">#5645654654</span></div>
+                    <hr>
+                    <div class="order__info row">
+                        <div class="col">
+                            <div class="order__number__id">
+                                <i class="fas fa-box fa-lg"></i><p>Numéro de commande : <span class="order__id">#5645654654</span></p>
+                            </div>
+                            <div class="order__date">
+                                <i class="far fa-calendar-minus fa-lg"></i><p>Date de commande : <span id="order__date">12/05/2020</span></p>
+                            </div>
+                            <div class="order__exp__date">
+                                <i class="far fa-calendar-minus fa-lg"></i><p>Date d'expédition : <span id="order__exp__date">13/05/2020</span></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a class="order__button" href="">Suivi de commande</a>
+                            <a class="order__button" href="">Politique de retour</a>
+                            <a class="order__button" href="">Besoin d'aide ?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery">
+                    <div class="row">
+                        <div class="col">
+                            <h3>INFORMATIONS DE FACTURATIONS</h3>
+                            <hr>
+                            <h5>VOS INFORMATIONS</h5>
+                            <p class="del__name"><span class="order__firstname">Mathilde</span> <span class="order__lastname">Dehay</span></p>
+                            <p class="del__address"><span class="order__address"></span></p>
+                            <p class="del__city"><span class="order__city">Paris</span>, <span class="order__zipcode"></span></p>
+                            <p class="del__country">FRANCE</p>
+                        </div>
+                        <div class="col">
+                            <h3>INFORMATIONS DE LIVRAISONS</h3>
+                            <hr>
+                            <h5>ADRESSE DE LIVRAISON</h5>
+                            <p class="del__place" >DOMICILE</p>
+                            <p class="del__address"><span class="order__address"></span></p>
+                            <p class="del__city"><span class="order__city">Paris</span>, <span class="order__zipcode"></span></p>
+                            <p class="del__country">FRANCE</p>
+                            <h5>VOS COORDONÉES</h5>
+                            <p class="del__mail"><span class="order__email"></span></p>
+                            <p class="del__name"><span class="order__firstname">Mathilde</span> <span class="order__lastname">Dehay</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="products">
+                    <h3>ARTICLES</h3>
+                    <hr>
+                    <div id="orderList" class="order__list">
+                    </div>
+                </div>
+
+                <template id="orderTemp">
+                    <a class="order__item">
+                        <div class="order__pic">
+                            <img src="" alt="">
+                        </div>
+                        <h4 class="order__name"></h4>
+                        <p class="order__price"></p>
+                        <hr>
+                    </a>
+                </template>
+
+                <div class="resume row">
+                    <div class="resume__payment col">
+                        <h3>INFORMATIONS DE PAIEMENT</h3>
+                        <hr>
+                        <div class="method">
+                            <div class="pic">
+                                <img id="cardType" src="assets/visa_card.jpg" alt="">
+                            </div>
+                            <span id="cardTypeDesc">VISA Débit</span>
+                        </div>
+                    </div>
+                    <div class="resume__price col">
+                        <h3>TOTAL COMMANDE</h3>
+                        <hr>
+                        <div class="product__price">
+                            <span class="total">SOUS-TOTAL : </span>
+                            <span id="productPrice" class="price"></span>
+                        </div>
+                        <div class="delivery__price">
+                            <span class="total">LIVRAISON : </span>
+                            <span class="price">GRATUIT</span>
+                        </div>
+                        <hr>
+                        <div class="total__price">
+                            <span class="total">TOTAL : </span>
+                            <span id="totalPrice" class="price"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="close">
+                    <div class="statut">
+                        <a href="" id="informationButton" class="button__statut information">VOTRE COMMANDE EST EN TRANSIT <i class="fas fa-truck-moving"></i></a>
+                        <div class="row">
+                            <div class="col">
+                                <a href="" id="cancelButton" class="button__statut cancel">ANNULER MA COMMANDE <i class="fas fa-times"></i></a>
+                            </div>
+                            <div class="col">
+                                <a href="" id="validButton" class="button__statut valid">J'AI RECU MON COLIS <i class="fas fa-check"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="leave()" class="quit">
+                        <i class="fas fa-sign-out-alt fa-3x"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <script src="js/confirmationCopy.js"></script>
+    </body>
+</html>

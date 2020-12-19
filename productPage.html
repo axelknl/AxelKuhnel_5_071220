@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Orinoco</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/835da4a40a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/sliderMenu.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header__product">
+            <div class="logo">
+                <a href="index.html">ORINOCO</a>
+            </div>
+            <nav class="menu">
+                <a href="index.html#product">Produits</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </nav>
+        </header>
+
+        <div class="space"></div>
+
+        <section class="product__page">
+            <div class="container container__productpage">
+                <div class="product__info">
+                    <p>Teddies</p>
+                    <h2 class="product__title" id="product__title" >Teedy Name</h2>
+                    <hr>
+                    <p class="product__price" id="product__price" ></p>
+                    <div class="add__cart">
+                        <h4>COULEURS</h4>
+                        <select name="select__color" id="product__option" class="product__select">
+                        </select>
+                        <a class="button" onclick="addToCart()" >Add To Cart</a>
+                        <p class="error__message" id="errorMessage"></p>
+                    </div>
+                    <h5>DESCRIPTION</h5>
+                    <p class="product__desc" id="product__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium imperdiet nibh, eget posuere nibh tincidunt quis. Etiam gravida ac justo sit amet pulvinar. Phasellus eget pulvinar quam, sit amet lobortis mi. Curabitur rhoncus, metus non eleifend tincidunt, mi velit rutrum libero, nec molestie massa nunc nec erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed a est ultrices, imperdiet libero nec, mollis ligula. Duis iaculis massa lorem, eget dignissim massa condimentum id.
+
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis interdum sapien, sit amet feugiat libero. Praesent gravida quam ac consectetur tempor. Quisque sollicitudin imperdiet libero, vitae convallis nisi cursus ut. Praesent aliquam dui vitae mauris luctus eleifend. Suspendisse molestie hendrerit sagittis. Integer tempus tellus quis venenatis pellentesque. Sed hendrerit elementum lacus at malesuada. Nullam volutpat arcu volutpat ante viverra dignissim. Donec non pulvinar nibh. Praesent ac porttitor tortor, sed molestie orci.
+                        
+                        Cras lorem nibh, consectetur sed aliquam nec, egestas vitae velit. Etiam congue nec mauris ac tincidunt. Suspendisse malesuada mi at urna pretium molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lobortis sem erat, et aliquet est finibus vel. Aliquam non pellentesque augue. Praesent dapibus sapien id justo feugiat, eu malesuada nulla auctor. Nunc tempor magna vel viverra dignissim. Praesent et luctus est. Fusce sollicitudin nulla sem, quis blandit libero sodales ut. Aenean semper nisl sed ligula ornare porttitor. Nulla molestie, est ac tempor cursus, ante magna finibus ante, in ornare turpis nulla sit amet orci. In hac habitasse platea dictumst. Suspendisse et imperdiet lorem. Nullam eu tempus augue.</p>
+                    <h5>BIEN PLUS QU'UN OURS</h5>
+                    <p class="product__desc">
+                        Souvenez-vous quand vous étiez enfant – la belle époque diront certains – vous adoriez prendre dans vos bras votre ours en peluche, que vous surnommiez affectueusement Teddy. Cet ours en peluche représentait tout pour vous. C'était le confident ultime, celui à qui vous racontiez toutes vos petites histoires, vos petits secrets. Et évidemment, vous saviez qu'il ne les répéterait à personne. <br><br>
+
+                        Votre nounours vous accompagnait même dans vos rêves, placé juste à côté de votre tête quand vous vous endormiez. Et quand vous aviez un coup de blues, c'est auprès de lui que vous trouviez du réconfort. Et l'avantage, c'est qu'il n'y avait même pas besoin d'inventer d'excuses pour aller voir les copains. Car au fond de vous, le meilleur ami que vous n'ayez jamais eu, il était dans votre chambre et vous attendait patiemment. <br><br>
+
+                        Votre ours en peluche, c'était aussi un refuge. Après tout, qui vous consolait quand vous étiez punis par vos parents ? Et oui, encore et toujours votre cher nounours en peluche. Avec le recul, vous vous dites sûrement que c'était le meilleur cadeau qu'on vous ait offert. Et vous n'avez sans doute pas tort. <br>
+                    </p>
+                    <a href="https://fr.trustpilot.com/" target="_blank" class="trustpilot">
+                        <img src="assets/trustpilot.jpg" alt="">
+                    </a>
+                </div>
+                <div class="product__image">
+                    <img src="assets/teddy_4.jpg" id="product__img" alt="">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="link__list">
+                <a href="">Mentions légales</a>
+                <a href="">Service clients : 06 21 56 68 78</a>
+                <a href="" class="contact">Contact : Mail</a>
+            </div>
+            <p class="author">Copyright Orinoco . Design by <a href="http://axelkuhnel.com/">Axel KUHNEL</a></p>
+        </footer>
+        <script src="js/productCopy.js"></script>
+    </body>
+</html>
